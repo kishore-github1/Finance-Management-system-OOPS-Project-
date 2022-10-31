@@ -16,4 +16,5 @@ MYSQL* connect(MYSQL* con) {
 		cout << "failed connection" << endl;
 	}
 	return con;
+	
 }
