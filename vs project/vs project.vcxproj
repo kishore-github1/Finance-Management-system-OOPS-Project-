@@ -133,13 +133,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="insert.cpp" />
     <ClCompile Include="connection.cpp" />
     <ClCompile Include="login.cpp" />
     <ClCompile Include="Institute Financial MS.cpp" />
+    <ClCompile Include="staff.cpp" />
+    <ClCompile Include="student.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="insert.h" />
     <ClInclude Include="connection.h" />
     <ClInclude Include="login.h" />
+    <ClInclude Include="staff.h" />
+    <ClInclude Include="student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
