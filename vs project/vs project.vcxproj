@@ -137,6 +137,8 @@
     <ClCompile Include="connection.cpp" />
     <ClCompile Include="login.cpp" />
     <ClCompile Include="Institute Financial MS.cpp" />
+    <ClCompile Include="search.cpp" />
+    <ClCompile Include="Update.cpp" />
     <ClCompile Include="staff.cpp" />
     <ClCompile Include="student.cpp" />
   </ItemGroup>
@@ -144,8 +146,10 @@
     <ClInclude Include="insert.h" />
     <ClInclude Include="connection.h" />
     <ClInclude Include="login.h" />
+    <ClInclude Include="search.h" />
     <ClInclude Include="staff.h" />
     <ClInclude Include="student.h" />
+    <ClInclude Include="update.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

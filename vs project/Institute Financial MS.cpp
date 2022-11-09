@@ -6,6 +6,8 @@
 #include "connection.h"
 #include "login.h"
 #include"insert.h"
+#include"search.h"
+#include"update.h"
 
 
 using namespace std;
@@ -18,9 +20,10 @@ int main()
 				MYSQL* connected;
 				connected = connect(con);
 			//	staff_insert(connected);
-				student_insert(connected);
+			//	student_insert(connected);
 			//	login(connected);
-
+			//	search(connected);
+				update(connected);
 
 
 	return 0;
