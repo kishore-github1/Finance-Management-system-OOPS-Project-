@@ -21,7 +21,7 @@ void search(MYSQL* con) {
 	if (choice == 1) table = "student";
 	else table = "staff";
 
-	ss << "SELECT * FROM student WHERE id= '"<<id<<"' ";
+	ss << "SELECT * FROM " << table << " WHERE id= '"<<id<<"' ";
 
 	string query = ss.str();
 	const char* q = query.c_str();
@@ -34,13 +34,18 @@ void search(MYSQL* con) {
 
 		{
 
-			cout << "\n\n Your Id -> " << row[0];
-			/*
-			cout << "\n\n Your Name -> " << row[1];
-			cout << "\n\n Your Email -> " << row[2];
-			cout << "\n\n Your Password -> " << row[3];
-			*/
+			cout << "\n\n  Id -> " << row[0];	
+			cout << "\n\n  Name -> " << row[1];
+			cout << "\n\n  Tution Fee -> " << row[2];
+			cout << "\n\n  Hostel Fee -> " << row[3];
+			cout << "\n\n  Caution Deposit -> " << row[4] << endl;
+			char *paid = row[5];
+			if (*paid == '1') {
+				cout << "Fee paid" << endl;
+			}
+			else cout << "Not paid" << endl;
 
+			
 
 		}
 	}

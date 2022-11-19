@@ -18,7 +18,7 @@ void student_insert(MYSQL* con) {
 	obj.create_student();
 
 
-	ss << "INSERT INTO student (Id,Name,Tution_fee,Hostel_fee,Caution_deposit) VALUES ('" << obj.id << "','" << obj.name << "'," << obj.tution_fee << "," << obj.hostel_fee << "," << obj.caution_deposit << ")";
+	ss << "INSERT INTO student (Id,Name,Tution_fee,Hostel_fee,Caution_deposit,paid_fee) VALUES ('" << obj.id << "','" << obj.name << "'," << obj.tution_fee << "," << obj.hostel_fee << "," << obj.caution_deposit << ","<<obj.paid_fee<<")";
 
 	string query = ss.str();
 	

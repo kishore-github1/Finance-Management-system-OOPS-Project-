@@ -1,18 +1,27 @@
 #include<mysql.h>
 #include<iostream>
+#include<iomanip>
 #include<sstream>
 
 using namespace std;
 
-void login(MYSQL* con) {
+int login(MYSQL* con) {
     string usname;
     string psswd;
-    cout << "Enter Login Credentials" << endl;
-    cout << "Enter Username: " << endl;
-    cin >> usname;
-    cout << "Enter Password: " << endl;
-    cin >> psswd;
+    // system("COLOR 0D");
 
+    cout << setfill(' ') << setw(10) << endl;
+    cout << "************************\n";
+    cout << setfill(' ') << setw(20) << endl;
+    cout << "LOGIN\n";
+    cout << setfill(' ') << setw(10) << endl;
+    cout << "************************\n";
+    cout << endl << setfill(' ') << setw(15) << " ";
+    cout << "Enter Login Credentials\n\n";
+    cout << setw(15) << " " << "Enter Username: ";
+    cin >> usname;
+    cout << setw(15) << " " << "Enter Password: ";
+    cin >> psswd;
 
 
     MYSQL_RES* res;
@@ -29,13 +38,13 @@ void login(MYSQL* con) {
 
             if (psswd == row[1]) {
                 cout << "Welcome" << endl;
+                return 1;
             }
             else {
                 cout << "Credentials are wrong" << endl;
             }
         }
     }
-
-
+    return 0;
 
 }

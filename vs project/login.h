@@ -1,3 +1,3 @@
 #pragma once
 
-void login(MYSQL* con);
+int login(MYSQL* con);

@@ -13,8 +13,11 @@ public:
 	int hostel_fee;
 	int caution_deposit;
 	string date;
+	int paid_fee;
+
 
 	void create_student();
+	
 
 };
 
