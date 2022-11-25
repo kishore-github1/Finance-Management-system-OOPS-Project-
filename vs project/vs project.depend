@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1669031733 source:c:\users\91779\desktop\vs project\vs project\expfunds.cpp
+	"expFunds.h"
+
+1669040454 c:\users\91779\desktop\vs project\vs project\expfunds.h
+
+1669040454 source:c:\users\91779\desktop\vs project\vs project\fixedassets.cpp
+	"fixedAssets.h"
+
+1669040454 c:\users\91779\desktop\vs project\vs project\fixedassets.h
+

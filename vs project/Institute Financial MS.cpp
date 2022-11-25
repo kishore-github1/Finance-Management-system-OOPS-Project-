@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <conio.h>
 #include<windows.h>
@@ -10,62 +11,59 @@
 #include"search.h"
 #include"update.h"
 #include"time.h"
-#include"paysalary.h"
-#include"collectFee.h"
 #include"PayStudentFee.h"
+#include"ManageFunds.h"
 
 
 using namespace std;
 
 
 void showMenu() {
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(hConsole, FOREGROUND_RED);
-	
-	cout << "\n\t\tCHANAKYA" << endl;
+
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);	
+	SetConsoleTextAttribute(hConsole, 3);
+	cout << endl << setw(30) << " " << "**************************************\n\n";
+	cout << setw(35) << " " << "CHANAKYA MANAGEMENT SYSTEM" << endl << endl;
+	cout << setw(30) << " " << "**************************************\n\n\n\n";
+
+	SetConsoleTextAttribute(hConsole, 4);
+	cout << setw(35) << " " << "MAIN MENU\n" << endl;
+
 	SetConsoleTextAttribute(hConsole, 14);
-	cout << "\n\t\t1.Insert student\n\t\t2.Insert Staff" << endl;
-	cout << "\t\t3.Search " << endl;
-	cout << "\t\t4.Update " << endl;
-	cout << "\t\t5.Pay Student Fee " << endl;
-	cout << "\t\t6.Exit " << endl;
-	cout << "Enter here:";
+
+	cout << setw(30) << " " << "1. Insert Student\n" << endl;
+	cout << setw(30) << " " << "2. Insert Staff\n" << endl;
+	cout << setw(30) << " " << "3. Search\n" << endl;
+	cout << setw(30) << " "<< "4. Update\n" << endl;
+	cout << setw(30) << " " << "5. Pay Student Fee\n" << endl;
+	cout << setw(30) << " " << "6. Modify Funds\n" << endl;
+	cout << setw(30) << " " << "7. Exit\n" << endl;
+	cout << setw(30) << " " << "Enter here:";
 
 }
 
 int main()
 		{
-				//To change colour of terminal
+			
 
 				HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-			//	SetConsoleTextAttribute(hConsole,FOREGROUND_GREEN);
-
-				//end of code to change colour
 
 				MYSQL* con = nullptr;
 				MYSQL* connected;
 				
 				connected = connect(con);
-			//	collectFee(connected);
+		
 
-			//	staff_insert(connected);
-			//	student_insert(connected);
-			//	login(connected);
-			//	search(connected);
-			//	update(connected);
-
-			//	time();
-				
-			//	paysalary(connected);
 
 				int choice,status=0;
-				status=login(connected);
-				cout << status<<endl; 
+				status=login(connected); 
 
 
 				
 				if (status == 1) {
+
 					showMenu();
+
 					while (1) {
 
 
@@ -107,6 +105,12 @@ int main()
 							break;
 
 						case 6:
+							system("cls");
+							ManageFunds(connected);
+							Sleep(3000);
+							showMenu();
+							break;
+						case 7:
 							return 0;
 						}
 

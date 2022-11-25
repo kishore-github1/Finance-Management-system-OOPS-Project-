@@ -133,19 +133,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="expFunds.cpp" />
+    <ClCompile Include="fixedAssets.cpp" />
+    <ClCompile Include="funds.cpp" />
     <ClCompile Include="insert.cpp" />
     <ClCompile Include="connection.cpp" />
     <ClCompile Include="login.cpp" />
     <ClCompile Include="Institute Financial MS.cpp" />
+    <ClCompile Include="ManageFunds.cpp" />
+    <ClCompile Include="member.cpp" />
+    <ClCompile Include="PayStudentFee.cpp" />
     <ClCompile Include="search.cpp" />
     <ClCompile Include="Update.cpp" />
     <ClCompile Include="staff.cpp" />
     <ClCompile Include="student.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="expFunds.h" />
+    <ClInclude Include="fixedAssets.h" />
+    <ClInclude Include="funds.h" />
     <ClInclude Include="insert.h" />
     <ClInclude Include="connection.h" />
     <ClInclude Include="login.h" />
+    <ClInclude Include="ManageFunds.h" />
+    <ClInclude Include="member.h" />
+    <ClInclude Include="PayStudentFee.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="search.h" />
     <ClInclude Include="staff.h" />
     <ClInclude Include="student.h" />

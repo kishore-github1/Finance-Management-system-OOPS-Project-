@@ -1,20 +1,20 @@
 #pragma once
 #include<string>
+#include "member.h"
 using namespace std;
 
-class staff
+class staff:private member
 {
-public:
+private:
 
-		string id;
-		string name;
 		int total_salary;
 		int provident_fund;
 		int health_insurance;
 		int basic_salary;
 		string date;
+public:
 
-	    void create_staff();
+	    stringstream create_staff();
 
 };
 

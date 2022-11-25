@@ -6,10 +6,10 @@ MYSQL* connect(MYSQL* con) {
 
 
 	con = mysql_init(0);
-	con = mysql_real_connect(con, "localhost", "root", "", "chanakya_base", 8111, NULL, 0);
+	con = mysql_real_connect(con, "localhost", "root", "kishore", "chanakya_base", 3306, NULL, 0);
 
 	if (con) {
-		cout << "succesfull connection" << endl;
+		cout << "Succesfull Database connection" << endl;
 
 	}
 	else {
